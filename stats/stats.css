@@ -1,0 +1,69 @@
+:root {
+	--headerHeight: 12vh;
+}
+
+#stats {
+	width: 100vw;
+	height: 100vh;
+	background: radial-gradient(rgb(189, 244, 251), rgb(69, 189, 236));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#stats #header {
+	font-size: 5vh;
+	height: var(--headerHeight);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#stats #body {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: calc(100vh - var(--headerHeight));
+	width: 100vw;
+	align-items: center;
+}
+
+#stats #body #graphZone {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: calc(96vh - var(--headerHeight));
+	width: 50vw;
+}
+
+#stats #body #graphZone #dataSelection {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: calc(96vh - var(--headerHeight));
+	width: 12.5vw;
+}
+
+#stats #body #graphZone #dataSelection .dataSelectionButton {
+	background: #7bb2e3;
+	border-bottom: 2px solid #13667d;
+	border-top: 2px solid #13667d;
+	display: flex;
+	margin-top: 1vh;
+	height: 6vh;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	color: black;
+}
+
+#stats #body #graphZone #dataSelection .dataSelectionButton.selected {
+	background: #cbe9ec;
+	border-color: #4d9ab4;
+}
+
+#stats #body #graphZone #graph {
+	display: flex;
+	height: calc(96vh - var(--headerHeight));
+	width: 37.5vw;
+}

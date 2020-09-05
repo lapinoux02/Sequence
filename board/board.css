@@ -1,0 +1,5 @@
+#board {
+	width: 100vw;
+	height: 100vh;
+	background: radial-gradient(rgb(189, 244, 251), rgb(69, 189, 236));
+}

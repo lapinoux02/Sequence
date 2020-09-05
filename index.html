@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="best game ever">
+	<title>Sequence</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<link rel="stylesheet" type="text/css" href="board/board.css">
+	<link rel="stylesheet" type="text/css" href="stats/stats.css">
+	<link rel="stylesheet" type="text/css" href="ring/ring.css">
+	<link rel="stylesheet" type="text/css" href="graph/graph.css">
+	<link rel="stylesheet" type="text/css" href="home/home.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+	<script src="globals.js"></script>
+	<script src="board/board.js"></script>
+	<script src="stats/stats.js"></script>
+	<script src="ring/ring.js"></script>
+	<script src="graph/graph.js"></script>
+	<script src="home/home.js"></script>
+</head>
+<body>
+<div id="app">
+	<home v-if="screen === 'home'"
+		:levels="levels"
+		@newgame="newGame"
+	></home>
+	<board
+		v-if="screen === 'board'"
+		:frequency="currentLevel.frequency"
+		:strength="currentLevel.strength"
+		:sleep="currentLevel.sleep"
+		@endgame="endGame"
+	></board>
+	<stats
+		v-if="screen === 'stats'"
+		@newgame="newGame"
+		@gohome="goHome"
+		:stats="stats"
+	></stats>
+</div>
+</body>
+<script src="app.js"></script>
+</html>

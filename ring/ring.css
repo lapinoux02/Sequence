@@ -1,0 +1,35 @@
+.ring {
+	position: fixed;
+	top: calc(var(--top) * 1px);
+	left: calc(var(--left) * 1px);
+	width: calc(var(--size) * 1vw);
+	height: calc(var(--size) * 1vw);
+	border-radius: calc(var(--size) * 1vw);
+	background: radial-gradient(rgb(210, 212, 115), rgb(236, 175, 69), rgb(174, 136, 44));
+	transition: background 150ms;
+}
+
+.ring.lvl1 {
+	background: radial-gradient(rgb(212, 170, 115), rgb(236, 140, 69), rgb(174, 117, 44));
+	transition: background 150ms;
+}
+
+.ring-enter-active, .ring-leave-active {
+	transition: all 150ms;
+}
+
+.ring-enter {
+	opacity: 0;
+	width: 0;
+	height: 0;
+	margin-top: calc(var(--size) / 2 * 1vw);
+	margin-left: calc(var(--size) / 2 * 1vw);
+}
+
+.ring-leave-to {
+	opacity: 0;
+	width: calc(var(--size) * 2 * 1vw);
+	height: calc(var(--size) * 2 * 1vw);
+	margin-top: calc(var(--size) / 2 * -1vw);
+	margin-left: calc(var(--size) / 2 * -1vw);
+}
