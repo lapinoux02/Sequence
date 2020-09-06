@@ -10,7 +10,7 @@
       "sizes": "512x512",
       "type": "image/png"
     }],
-  "start_url": "http://localhost:8005/index.html",
+  "start_url": "http://bluecactus.freeboxos.fr/Sequence/index.html",
   "display": "standalone",
   "background_color": "#353333",
   "orientation": "landscape",
