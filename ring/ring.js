@@ -20,7 +20,7 @@ Vue.component('ring', {
 		<div ref="ring"
 			:class="classes"
 			:style="style"
-			@click="clicked"
+			@touchstart="clicked"
 		>
 		</div>
 	</transition>`,

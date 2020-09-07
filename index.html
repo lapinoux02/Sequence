@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="best game ever">
+	<meta name="description" content="best game ever">
 	<title>Sequence</title>
 	<!-- Manifest -->
-	<link rel="manifest" type="text/css" href="./manifest.json" />
+	<link rel="manifest" href="./manifest.json" />
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="app.css">
 	<link rel="stylesheet" type="text/css" href="board/board.css">
@@ -24,7 +24,7 @@
 	<script src="graph/graph.js"></script>
 	<script src="home/home.js"></script>
 </head>
-<body>
+<body oncontextmenu="return false">
 <div id="app">
 	<home v-if="screen === 'home'"
 		:levels="levels"
