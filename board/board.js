@@ -19,7 +19,7 @@ Vue.component('board', {
 			:x="ring.x"
 			:y="ring.y"
 			:strength="ring.strength"
-			@clicked="click($event, ring)"
+			@touchstart="click($event, ring)"
 			:key="ring.index"
 		></ring>
 	</div>`,
