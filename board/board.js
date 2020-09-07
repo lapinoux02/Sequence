@@ -14,12 +14,12 @@ Vue.component('board', {
 			lastTick: 0 // Le dernier moment où la fréquence du jeu à changé
 		}
 	},
-	template: `<div id="board" @click="click">
+	template: `<div id="board" @touchstart="click">
 		<ring v-for="ring in rings"
 			:x="ring.x"
 			:y="ring.y"
 			:strength="ring.strength"
-			@touchstart="click($event, ring)"
+			@clicked="click($event, ring)"
 			:key="ring.index"
 		></ring>
 	</div>`,
