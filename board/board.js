@@ -39,7 +39,7 @@ Vue.component('board', {
 				this.localMissClicks = 0;
 				let target = event.currentTarget;
 				let radius = target.scrollHeight / 2;
-				clickedRing.clickPrecision = 1 - (Math.sqrt(Math.pow(target.offsetLeft + radius - event.clientX, 2) + Math.pow(target.offsetTop + radius - event.clientY, 2)) / radius);
+				clickedRing.clickPrecision = 1 - (Math.sqrt(Math.pow(target.offsetLeft + radius - event.changedTouches[0].clientX, 2) + Math.pow(target.offsetTop + radius - event.changedTouches[0].clientY, 2)) / radius);
 				
 				// Ajout de la bulle aux bulles cliquées
 				this.clickedRings.push(clickedRing);
