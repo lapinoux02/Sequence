@@ -1,22 +1,22 @@
 const sw = 'sequence-v1'
 const assets = [
-	'/index.html',
+	'/Sequence/index.html',
 	'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js',
-	'/app.js',
-	'/globals.js',
-	'/stats/stats.js',
-	'/ring/ring.js',
-	'/board/board.js',
-	'/graph/graph.js',
-	'/home/home.js',
-	'/app.css',
-	'/board/board.css',
-	'/stats/stats.css',
-	'/ring/ring.css',
-	'/graph/graph.css',
-	'/home/home.css',
-	'/ressources/icon192.png',
-	'/ressources/icon512.png'
+	'/Sequence/app.js',
+	'/Sequence/globals.js',
+	'/Sequence/stats/stats.js',
+	'/Sequence/ring/ring.js',
+	'/Sequence/board/board.js',
+	'/Sequence/graph/graph.js',
+	'/Sequence/home/home.js',
+	'/Sequence/app.css',
+	'/Sequence/board/board.css',
+	'/Sequence/stats/stats.css',
+	'/Sequence/ring/ring.css',
+	'/Sequence/graph/graph.css',
+	'/Sequence/home/home.css',
+	'/Sequence/ressources/icon192.png',
+	'/Sequence/ressources/icon512.png'
 ];
 
 self.addEventListener('install', installEvent => {
