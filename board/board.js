@@ -85,7 +85,11 @@ Vue.component('board', {
 	created() {
 		this.interval = setInterval(() => {
 			this.timer++;
-			if (this.frequency(this.timer, this.lastTick)) {
+			if (this.frequency({
+				timer: this.timer,
+				lastTick: this.lastTick,
+				rings: this.rings.length
+			})) {
 				try {
 					let newRingCoordinates = this.getNewCoordinates();
 					this.rings.push({

@@ -11,18 +11,23 @@ let app = new Vue({
 		return {
 			levels: [{
 				name: 'Burst',
-				frequency: (timer, lastTick, x = 55 - timer%55) => [1,3,6,10,15,21,28,36,45,55].some(e => e === x),
+				frequency: (e, x = 55 - e.timer%55) => [1,3,6,10,15,21,28,36,45,55].some(e => e === x),
 				strength: i => 0,
 				sleep: 50000
 			}, {
 				name: 'Acceleration',
-				frequency: (timer, lastTick, diff = timer - lastTick) => !(diff%(10 - Math.min(Math.floor(lastTick / 50), 9))),
+				frequency: (e, diff = e.timer - e.lastTick) => !(diff%(10 - Math.min(Math.floor(e.lastTick / 50), 9))),
 				strength: i => 0,
 				sleep: 50000
 			}, {
 				name: 'Random',
-				frequency: () => !Math.floor(Math.random()*8),
+				frequency: e => !Math.floor(Math.random()*8),
 				strength: i => Math.floor(Math.random()*2),
+				sleep: 50000
+			}, {
+				name: 'Infinity',
+				frequency: e => e.rings < 4,
+				strength: i => 0,
 				sleep: 50000
 			}],
 			screen: 'home',
