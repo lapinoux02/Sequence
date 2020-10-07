@@ -54,8 +54,8 @@ Vue.component('stats', {
 				</div>
 			</div>
 			<div class="buttons">
-				<div class="button" @click="newGame">Retry</div>
-				<div class="button" @click="goHome">Home</div>
+				<div class="button" @touchstart="newGame">Retry</div>
+				<div class="button" @touchstart="goHome">Home</div>
 			</div>
 		</div>
 	</div>`,

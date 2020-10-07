@@ -33,7 +33,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	height: calc(96vh - var(--headerHeight));
-	width: 50vw;
+	width: 70vw;
 }
 
 #stats #body #graphZone #dataSelection {
@@ -41,7 +41,7 @@
 	flex-direction: column;
 	justify-content: center;
 	height: calc(96vh - var(--headerHeight));
-	width: 12.5vw;
+	width: 20vw;
 }
 
 #stats #body #graphZone #dataSelection .dataSelectionButton {
@@ -55,6 +55,7 @@
 	align-items: center;
 	font-weight: bold;
 	color: black;
+	white-space: nowrap;
 }
 
 #stats #body #graphZone #dataSelection .dataSelectionButton.selected {
@@ -65,5 +66,5 @@
 #stats #body #graphZone #graph {
 	display: flex;
 	height: calc(96vh - var(--headerHeight));
-	width: 37.5vw;
+	width: 50vw;
 }
